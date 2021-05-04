@@ -1,0 +1,41 @@
+<html>
+    <head>
+            <meta charset = "UTF-8"/>
+    </head>
+    <body>
+            60181912 유성연<p>
+            인터넷프로그래밍 4주차과제
+    </body>
+    <script>
+            function makeSquare(leftX,leftY,rightX,rightY) {
+                    var willReturn = {
+                            a: leftX,
+                            b: leftY,
+                            c: rightX,
+                            d: rightY,
+                            getArea: function () {
+                                return (Math.abs(this.a - this.c) * Math.abs(this.b - this.d))
+                            },
+                            getCircumstance: function(){
+                                return (Math.abs(this.a - this.c) + Math.abs(this.b - this.d)) * 2
+                            },
+                            toString: function() {
+                                return 'Area: (' + this.a +', '+this.b + ') to (' + this.c + ', ' + this.d + ') = ' + this.getArea() + '\n' + 
+                                'Circumstance: (' + this.a +', '+this.b + ') to (' + this.c + ', ' + this.d + ') = ' + this.getCircumstance() 
+                            }
+                    };
+                    return willReturn;
+                }
+                var square = [];
+                square.push(makeSquare(100,200,150,250));
+                square.push(makeSquare(50,50,100,400));
+                square.push(makeSquare(45,100,10,50));
+                var output = 'Area and Circumstance\n\n';
+                for (var i in square) {
+                    output += square[i].toString() + '\n';
+                }
+                alert(output);
+                    
+    </script> 
+        
+</html>

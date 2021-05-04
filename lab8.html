@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60181912 유성연_인프8주차</title>
+    
+    <script>
+        window.onload = function () {
+            var a = document.createElement('h1');
+            var b = document.createElement('h1');
+            var c = document.createElement('h1');
+            var d = document.createElement('h1');
+            var e = document.createElement('h1');
+            
+            document.body.appendChild(a);
+            document.body.appendChild(b);
+            document.body.appendChild(c);
+            document.body.appendChild(d);
+            document.body.appendChild(e);
+
+            a.innerText = '색상 변경';
+            b.innerText = '내용 변경';
+            c.innerText = '타이머';
+            d.innerText = '아래 숫자증가';
+            e.innerText = 0;
+
+            a.addEventListener('click', () => {
+              var color_arr = ["red", "green", "blue", "purple", "pink"]
+              var num = Math.floor(Math.random() * color_arr.length)
+
+              a.style.color= color_arr[num]; 
+            });
+
+            b.addEventListener('click', () => {
+              b.innerHTML ='60181912 유성연 인프8주차'
+            });
+
+            c.addEventListener('click', () => {
+              const list = ["java", "script"];
+              function newstr(){
+                const i = Math.floor(Math.random() * 2);
+                c.innerHTML = list[i]
+              }
+
+              function init(){
+                newstr();
+                setInterval(newstr,500)
+              }
+    
+              init()});
+
+            d.addEventListener('click', () => {
+              e.innerHTML = Number(e.innerHTML) + 1;
+            });
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>

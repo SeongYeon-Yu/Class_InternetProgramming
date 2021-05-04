@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>60181912유성연_인프7주차</title>
+  <script>
+    window.onload = function () {
+		
+
+			var a1 = document.createElement('h1');
+			var a2 = document.createElement('h1');
+			var a3 = document.createElement('h1');
+			var a4 = document.createElement('h1');
+			var a5 = document.createElement('h1');
+
+			a1.style.color = 'red';
+			a2.style.color = 'blue';
+			a3.style.color = 'green';
+			a4.style.color = 'yellow';
+			a5.style.color = 'skyblue';
+      document.body.appendChild(a1);
+      document.body.appendChild(a2);
+      document.body.appendChild(a3);
+      document.body.appendChild(a4);
+    	document.body.appendChild(a5);
+
+      var aa = document.querySelectorAll('h1');
+var i=0;
+      test = setInterval(function () {
+				
+				if(i==aa.length){
+					aa[0].append(' change');
+					aa[1].append(' change');
+					aa[2].append(' change');
+					aa[3].innerHTML = 'Hello';
+					aa[4].innerHTML = 'Hello';
+					i++;
+					clearInterval(test)
+				}
+				else {
+					aa[i].innerHTML = 'test ' + i;
+					i++;
+				}
+			}, 1000);
+		};
+</script>
+</head>
+<body>
+</body>
+</html>
