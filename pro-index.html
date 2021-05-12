@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>60181912 유성연</title>
+</head>
+<body>
+  <script src="https://kit.fontawesome.com/e550c99a64.js" crossorigin="anonymous"></script>
+  <nav class="navbar">
+    <div class="navbar_logo">
+      <!-- <i class="fab fa-accusoft"></i> -->
+      <img id="logo" src="logo.jpg" width="20">
+      <a href="">seong yeon's web</a>
+    </div>
+    <ul class="navbar_menu">
+      <li><a href="http://classnet.mju.ac.kr/~s60181912/project/index.html">Home</a></li>
+      <li><a href="http://classnet.mju.ac.kr/~s60181912/project/profile.html">Profile</a></li>
+      <li><a href="http://classnet.mju.ac.kr/~s60181912/project/daily.html">Daily</a></li>
+      <li><a href="http://classnet.mju.ac.kr/~s60181912/project/puzzle.html">Q&A</a></li>
+      <li><a href="http://classnet.mju.ac.kr/~s60181912/project/quiz.html" title="퀴즈 풀기">Quiz</a></li>
+    </ul>
+    <div class="nav_links">
+      <!-- <li><a href="https://github.com/SeongYeon-Yu"><img src="#"> </a></li> -->
+      <li><a href="https://github.com/SeongYeon-Yu"><i class="fab fa-github"></i></a></li>
+      <!-- <li><a href="https://www.instagram.com/sy_lloz/"><img src="http://classnet.mju.ac.kr/~s60181912/project/insta.png" alt = "인스타그램" width="15"> </a></li> -->
+      <li><a href="https://www.instagram.com/sy_lloz/"><i class="fab fa-instagram"></i></a></li>
+    </div>
+  </nav>
+
+  <div id="about">
+    <div id="header">
+      <div id="text-box">
+        <h1 class = "heading-primary">
+          <span class="heading-primary-main">seong yeon's web</span>
+          <span class="heading-primary-sub">my dailylife</span>
+        </h1>
+      </div>
+    </div>
+</body>
+</html>
+<style>
+  body{
+    margin: 0;
+  }
+  a{
+    text-decoration: none;
+    color:white;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #777;
+    padding: 8px 12px;
+  }
+  .navbar_logo {
+    font-size:24px;
+    color:white;
+  }
+  .navbar_logo img{
+    clip-path: circle(50% at 50% 50%);
+  }
+  .navbar_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+  }
+  .navbar_menu li {
+    padding: 8px 12px;
+  }
+  .navbar_menu :hover {
+    background-color: thistle;
+    border-radius: 1rem;
+  }
+  .nav_links {
+    list-style: none;
+    color: white;
+    display: flex;
+    
+  }
+  .nav_links li{
+    padding: 8px 12px;
+  }
+
+
+  #about{
+  padding: 30px;
+  margin: 10px;
+  height:85vh;
+  background-image:linear-gradient(
+    to right bottom,
+    #bad56fa8,
+    #5661ffa9),
+    url("http://classnet.mju.ac.kr/~s60181912/project/me.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-size:20px;
+  margin: 0 auto;
+  /* clip-path: polygon(0 0, 100% 0,80% 550px,0 100%); */
+}
+
+.heading-primary{
+  color:rgb(255, 255, 255);
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+.heading-primary-main{
+  display:block;
+  font-size: 50px;
+  font-weight: 550;
+  letter-spacing: 1rem;
+  animation-name:moveInLeft;
+  animation-duration:2s;
+  animation-timing-function: ease-out;
+}
+.heading-primary-sub{
+  display: block;
+  font-size: 35px;
+  font-weight: 200;
+  margin-top: 6rem;
+  letter-spacing: 1rem;
+  animation:moveInRight 1s ease-out;
+}
+#text-box{
+  margin: 0 auto;
+  text-align: center;
+}
+@Keyframes moveInLeft{
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(1rem);
+  }
+      100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveInRight {
+  0% {
+    opacity:0;
+    transform: translateX(10rem);
+    }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity:0;
+    transform: translateY(-3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.navbar_menu,
+.navbar_logo,
+.nav_links {
+  animation:moveInBottom 1s ease-out;
+}
+/* #btn {
+  color:rgb(92, 92, 255);
+  text-decoration: none;
+  animation:moveInBottom 2s ease-out;
+} */
+
+</style>
