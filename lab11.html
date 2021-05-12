@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인프11주차 과제_유성연</title>
+  <style>
+    .odd-class-1 {color: pink;} /*클래스이름 odd-class-1에 글씨색 핑크색*/
+    .odd-class-3 {color: blue;} /*클래스이름 odd-class-3에 글씨색 파란색*/
+    .odd-class-5 {color: green;} /*클래스이름 odd-class-5에 글씨색 초록색*/
+    .odd-class-7 {color: orange;} /*클래스이름 odd-class-7에 글씨색 주홍색*/
+    /*.evencol {color:red;} 클래스이름 evencol에 글씨색 빨간*/
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('tr').each(function(index, item){ //tr인 태그를 반복하여 
+        $(item).addClass('odd-class-'+index); // 값들을 클래스이름 odd-class-[i]
+      })
+      $('tr:even').css('background', 'gray'); //짝수행 회색바탕
+      $('tr:first').css('background', 'green'); // 제목 초록바탕
+      $('.evencol').css('color', 'red'); // evencol클래스인 것 빨간글씨
+    })
+  </script>
+</head>
+<body>
+  <table>
+    <tr><th>수강과목</th><th>수강학기</th><th>학점</th></tr>
+    <tr><td>C++</td><td class='evencol'>2020-2</td><td>A+</td></tr>
+    <tr><td>빅데이터분석</td><td  class='evencol'>2020-2</td><td>A+</td></tr>
+    <tr><td>데이터마이닝및시각화</td><td class='evencol'>2020-2</td><td>A0</td></tr>
+    <tr><td>기계학습응용</td><td class='evencol'>2020-2</td><td>A0</td></tr>
+    <tr><td>신호및시스템</td><td class='evencol'>2020-1</td><td>A+</td></tr>
+    <tr><td>컴퓨터구조</td><td class='evencol'>2020-1</td><td>A+</td></tr>
+    <tr><td>모바일프로그래밍</td><td class='evencol'>2020-1</td><td>A+</td></tr>
+    <tr><td>정보보안</td><td class='evencol'>2020-1</td><td>A0</td></tr>
+  </table>
+</body>
+</html>
