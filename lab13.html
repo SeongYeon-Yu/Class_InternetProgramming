@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <title>60181912_lab13</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+  <script>
+    window.onload = function () {
+      $(document).ready(function () {
+        var list = [['1.Hello ', '1.world'], ['2.JavaScript', '2.Jquery'], ['3.Python', '3.Matplotlib']]
+        var index = 0;
+        var a = document.createElement('h1');
+        setInterval(function () {
+          var img = $('<img />', {
+            src: 'http://classnet.mju.ac.kr/~s60181912/a.jpg',
+            width: 250,
+            height: 250
+          }).appendTo('body')
+          $('<h1></h1>').html(list[index][0]).appendTo('body');
+          $('h1').before($('img'));
+          a.innerHTML = list[index++][1];
+          document.body.appendChild(a);
+          if (index === list.length) index = 0
+          setInterval(function () {
+            $('body').empty();
+          }, 1600)
+        }, 1700);
+      })
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
